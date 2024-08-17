@@ -1,14 +1,13 @@
 package Agenda_Electronica.IGU;
 
-/**
- *
- * @author Luis Gutiérrez
- */
 public class Principal extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Principal
-     */
+    String[] dnis = new String[10];
+    String[] nombres = new String[10];
+    String[] apellidos = new String[10];
+    String[] telefonos = new String[10];
+    String[] fechasNac = new String[10];
+    String[] direcciones = new String[10];
     public Principal() {
         initComponents();
     }
@@ -246,7 +245,16 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNombreActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        // TODO add your handling code here:
+        String indice = txtIndice.getText();
+        int indiceNum = Integer.parseInt(indice);
+        nombres[indiceNum] =  txtNombre.getText();
+        dnis[indiceNum] = txtDNI.getText();
+        apellidos[indiceNum] = txtApellido.getText();
+        telefonos[indiceNum] = txtTel.getText();
+        direcciones[indiceNum] = txtDireccion.getText();
+        fechasNac[indiceNum] = txtFechaNac.getText();
+        
+        
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnAdelanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdelanteActionPerformed
@@ -256,6 +264,7 @@ public class Principal extends javax.swing.JFrame {
             indiceNum += 1;
             indice = String.valueOf(indiceNum);
             txtIndice.setText(indice);
+            cambiarCamposTxt();
         }
     }//GEN-LAST:event_btnAdelanteActionPerformed
 
@@ -266,9 +275,21 @@ public class Principal extends javax.swing.JFrame {
             indiceNum -= 1;
             indice = String.valueOf(indiceNum);
             txtIndice.setText(indice);
+            cambiarCamposTxt();
         }
     }//GEN-LAST:event_btnAtrasActionPerformed
     
+    private void cambiarCamposTxt() {
+        String indice = txtIndice.getText();
+        int indiceNum = Integer.parseInt(indice);
+        // Cambia los valores de los campos con respecto a la posicion de el indice y los arreglos de cada uno
+        txtNombre.setText(nombres[indiceNum]);
+        txtApellido.setText(apellidos[indiceNum]);
+        txtDNI.setText(dnis[indiceNum]);
+        txtTel.setText(telefonos[indiceNum]);
+        txtDireccion.setText(direcciones[indiceNum]);
+        txtFechaNac.setText(fechasNac[indiceNum]);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdelante;
