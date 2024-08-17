@@ -116,18 +116,18 @@
                   <Component id="jSeparator2" alignment="1" pref="732" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jButton2" min="-2" pref="81" max="-2" attributes="0"/>
+                      <Component id="btnAtras" min="-2" pref="81" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                      <Component id="jButton3" min="-2" pref="111" max="-2" attributes="0"/>
+                      <Component id="btnGuardar" min="-2" pref="111" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                      <Component id="jButton4" min="-2" pref="81" max="-2" attributes="0"/>
+                      <Component id="btnAdelante" min="-2" pref="81" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="154" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="263" max="-2" attributes="0"/>
                       <Component id="jLabel8" min="-2" pref="51" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jTextField1" min="-2" pref="71" max="-2" attributes="0"/>
+                      <Component id="txtIndice" min="-2" pref="71" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -173,14 +173,14 @@
                       <Component id="jSeparator2" min="-2" pref="11" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton2" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                          <Component id="jButton4" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                          <Component id="jButton3" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="btnAtras" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="btnAdelante" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="btnGuardar" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="18" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel8" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                          <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtIndice" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -283,15 +283,18 @@
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator2">
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="btnAtras">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&lt;&lt;"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAtrasActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
+            <Component class="javax.swing.JButton" name="btnGuardar">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="0"/>
@@ -299,10 +302,10 @@
                 <Property name="text" type="java.lang.String" value="Guardar"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton4">
+            <Component class="javax.swing.JButton" name="btnAdelante">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="0"/>
@@ -310,7 +313,7 @@
                 <Property name="text" type="java.lang.String" value="&gt;&gt;"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdelanteActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
@@ -321,7 +324,7 @@
                 <Property name="text" type="java.lang.String" value="&#xcd;ndice"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="txtIndice">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="text" type="java.lang.String" value="0"/>
